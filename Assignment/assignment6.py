@@ -32,12 +32,12 @@ class Flight:
  
 class ScheduledFlight(Flight):
     def __init__(self, flight_no, airline, departure, arrival):
-        super().__init__(flight_no, airline)  # Call base constructor
+        super().__init__(flight_no, airline)
         self.departure = departure
         self.arrival = arrival
  
     def display_info(self):
-        super().display_info()  # Call parent method
+        super().display_info()
         print(f"Departure: {self.departure}, Arrival: {self.arrival}")
  
 sf = ScheduledFlight("AI101", "Air India", "10:00 AM", "1:30 PM")
