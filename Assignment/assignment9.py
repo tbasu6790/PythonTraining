@@ -8,15 +8,13 @@ import glob
 import re
 import os
  
-# Specify folder path (use '.' for current directory)
+# using '.' for current directory)
 folder_path = r"C:\Users\Titli.Basu\Documents\PythonTraining\Assignment"
  
-# Get all files in the folder
 files = glob.glob(os.path.join(folder_path, "*"))
  
 print("Matching files:")
 for file in files:
-    filename = os.path.basename(file)  # Extract just the file name
-    # Match files starting with "data_" and ending with ".csv"
+    filename = os.path.basename(file)
     if re.match(r"^data_.*\.csv$", filename):
         print(filename)
