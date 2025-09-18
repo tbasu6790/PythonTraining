@@ -35,6 +35,7 @@ def menu():
 
         elif choice == "5":
             print("Exiting... The menu !!")
+            break
         
         else:
             print("Wrong option selected !!")
