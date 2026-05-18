@@ -11,7 +11,7 @@ Remove "Electronics" from the product tuple (by converting to list, removing, an
 Unpack the tuple product into three variables and print each variable.
 Create a nested tuple that contains three product tuples inside it. Access and print the name of the second product in the nested tuple'''
 
-product = ("Laptop", 50000, "Black", "Samsung", "Electronics")
+product = ("Laptop", 50000, "Black", 'Samsung', "Electronics")
 print("Product tuple:", product)
 
 print("Second element of the product tuple:", product[1])
@@ -43,11 +43,10 @@ p_list.remove("Electronics")
 product = tuple(p_list)
 print("Product tuple after removing 'Electronics':", product)
 
-name, price, color, brand, *rest = product
+name, price, color, *rest = product
 print("Unpacked values - \nName:", name)
-print("Price:", price)
+print("Price:", price) 
 print("Color:", color)
-print("Brand:", brand)
 
 product_nested = (("Laptop", 50000, "Black"), ("Smartphone", 30000, "White"), ("Tablet", 20000, "Gray"))
 #print("Nested product tuple:", product_nested)
