@@ -33,7 +33,7 @@ class SeatsUnavailableError(Exception):
 
 def main():
     try:
-        file = open(r"C:\Users\Titli.Basu\Documents\PythonTraining\Assignment\flight.txt", "r")
+        file = open("flights.txt", "r")
         
         # Read flight data into a dictionary
         flights = {}
@@ -49,6 +49,9 @@ def main():
         try:
             flight_no = input("Enter flight number: ").strip()
             tickets = int(input("Enter number of tickets to book: "))
+
+            if tickets == 0:
+                raise ZeroDivisionError("Number of tickets cannot be zero.")
 
             if flight_no not in flights:
                 raise FlightNotFoundError(f"Flight {flight_no} not found!")
@@ -69,6 +72,7 @@ def main():
             print(f"Tickets Booked: {tickets}")
             print(f"Total Cost: {total_cost}")
             print(f"Discount per Ticket: {discount_per_ticket}")
+            print("Test")
 
         except FlightNotFoundError as e:
             print("Error:", e)
@@ -90,4 +94,4 @@ def main():
             pass
 
 if __name__ == "__main__":
-     main()
+    main()
